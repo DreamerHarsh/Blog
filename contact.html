@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    * {
+        font-family: 'Spartan', sans-serif;
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        -webkit-transition: .2s linear;
+        transition: .2s linear;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+
+    section {
+        padding: 3rem 7.5%;
+    }
+
+    .heading {
+        background: url(assets/heading.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding-top: 5rem;
+        padding-bottom: 6rem;
+        opacity: .85;
+    }
+
+    .heading h1 {
+        color: #000000;
+        font-size: 4rem;
+    }
+
+    .heading p {
+        padding: 1rem 0 .25rem 0;
+        font-size: 1.95rem;
+    }
+
+    .heading p a {
+        color: #4caf50;
+        padding-right: .5rem;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .heading p a:hover {
+        color: #1b4332;
+    }
+
+    .heading .primary {
+        font-size: 2.25rem;
+        text-transform: none;
+        color: #dd4124;
+    }
+
+    .heading .secondary {
+        color: #34568b;
+        text-transform: none;
+    }
+
+    .contact .icons-container {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(30rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .contact .icons-container .icons {
+        text-align: center;
+        border-radius: 5px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding: 2rem;
+    }
+
+    .contact .icons-container .icons:hover {
+        -webkit-box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.5) 0px 0.25em 1em;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.5) 0px 0.25em 1em;
+    }
+
+    .contact .icons-container .icons i {
+        height: 6rem;
+        width: 6rem;
+        line-height: 6rem;
+        font-size: 2.5rem;
+        color: #fdfffc;
+        border-radius: 50%;
+    }
+
+    .contact .icons-container .icons .fa-phone {
+        background: #7496cb;
+    }
+
+    .contact .icons-container .icons .fa-envelope-open {
+        background: #efc050;
+    }
+
+    .contact .icons-container .icons .fa-map-marker-alt {
+        background: #d90429;
+    }
+
+    .contact .icons-container .icons h3 {
+        color: #000000;
+        font-size: 2rem;
+        padding: 1rem 0;
+    }
+
+    .contact .icons-container .icons p {
+        color: #4d4d4d;
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+
+    .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .row .form {
+        padding: 2rem;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+        border-radius: 1%;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    .row .form h3 {
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+        color: #000000;
+    }
+
+    .row .form .inputBox {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .row .form .inputBox input {
+        border-radius: 10px;
+        width: 49%;
+    }
+
+    .row .form .inputBox .box,
+    .row .form textarea {
+        padding: 1rem 1.2rem;
+        font-size: 1.6rem;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        color: #000000;
+        text-transform: none;
+        margin: .7rem 0;
+        border-radius: 10px;
+    }
+
+    .row .form textarea {
+        width: 100%;
+        height: 15rem;
+        resize: none;
+    }
+
+    .row .map {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+        width: 100%;
+    }
+</style>
+
+<body>
+
+
+    <!-- Header -->
+    <header id="header" class="shadow bg-light" style="height: 75px; padding: 5px 10px;">
+        <nav class="container navbar">
+            <a href="index.html" class="nav-brand text-dark">
+                Bloggen
+            </a>
+
+            <!-- toggle button -->
+            <button class="toggle-button">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!-- collapse on toggle button click -->
+            <div class="collapse">
+                <ul class="navbar-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="portflio.html" class="nav-link">Portfolio</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </ul>
+            </div>
+
+            <!-- collapse on toggle button click -->
+            <div class="collapse">
+                <ul class="navbar-nav">
+                    <div class="search-box">
+                        <a href="#" class="nav-link"><i class="fas fa-search"></i></a>
+                    </div>
+                    <a href="https://www.facebook.com/profile.php?id=100029018010071" class="nav-link"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/SUMUltimate" class="nav-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/rahul_25141" class="nav-link"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/debasish-sinha-097664222/" class="nav-link"><i
+                            class="fab fa-linkedin"></i></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- .Header -->
+
+
+
+
+    <div class="heading">
+        <h1>Do You Wanna Write Blog Here</h1>
+        <p class="primary">Contact Us</p>
+        <p class="secondary">For your ideas and recommendation</p>
+    </div>
+
+    <section class="contact">
+
+        <div class="icons-container">
+
+            <div class="icons">
+                <i class="fal fa-phone"></i>
+                <h3>our number</h3>
+                <p>7701857404</p>
+                <p>9667459928</p>
+                <p>9933449415</p>
+            </div>
+
+            <div class="icons">
+                <i class="fal fa-envelope-open"></i>
+                <h3>our email</h3>
+                <p>ryrahul12345@gmail.com</p>
+                <p>harssshraj@outlook.com</p>
+                <p>sinhadebasishofficial@gmail.com</p>
+            </div>
+
+
+            <div class="icons">
+                <i class="fal fa-map-marker-alt"></i>
+                <h3>our address</h3>
+                <p>Phagwara, LPU</p>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <form action="" class="form">
+                <h3 class="none">Get in touch</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Enter your name" class="box">
+                    <input type="email" placeholder="Enter your email" class="box">
+                </div>
+
+                <div class="inputBox">
+                    <input type="number" placeholder="Enter your number" class="box">
+                    <input type="text" placeholder="Enter your subject" class="box">
+                </div>
+                <textarea placeholder="Your message" id="" cols="30" rows="10"></textarea>
+                <a href="mailto:harssshraj@outlook.com"> <button type="button" class="btn btn-light">Submit</button></a>
+            </form>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223994.25250460726!2d76.95126319269946!3d28.692332875413104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d047309fff32f%3A0xfc5606ed1b5d46c3!2sDelhi!5e0!3m2!1sen!2sin!4v1645288680089!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
